@@ -1,8 +1,8 @@
 # Dit bestand zorgt voor de gebruikersinterface (GUI)van onze programma.
-# Vul hier de naam van je programma in:
+# Vul hier de naam van je programma in:MC Pizzeria
 #
 #
-# Vul hier jullie namen in:
+# Vul hier jullie namen in:Ruben Harms
 #
 #
 #
