@@ -31,5 +31,17 @@ labelIntro.grid(row=0, column=0, sticky="W")
 knopSluit = Button(venster, text="Sluiten",width=12,command=venster.destroy)
 knopSluit.grid(row=17, column=4)
 
+klantnaam = Label(venster, text="Klantnaam")
+klantnaam.grid(row=1, column=0, sticky="W")
+
+ingevoerde_klantnaam = StringVar()
+invoerveldKlantnaam = Entry(venster, textvariable=ingevoerde_klantnaam)
+invoerveldKlantnaam.grid(row=1, column=1, sticky="W")
+
+invoerveldKlantNr = Entry(venster)
+invoerveldKlantNr.grid(row=2, column=1, sticky="W")
+
+
+
 #reageert op gebruikersinvoer, deze regel als laatste laten staan
 venster.mainloop()
