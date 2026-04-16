@@ -65,17 +65,17 @@ venster = Tk()
 venster.iconbitmap("MC_icon.ico") #Let op: Dit werkt niet op een MAC! Zet deze regel dan in commentaar
 venster.wm_title("MC Pizzeria")
 
-labelIntro = Label(venster, text="Welkom!")
+labelIntro = Label(venster, text="Welkom!", bg="lightblue")
 labelIntro.grid(row=0, column=0, sticky="W")
-knopSluit = Button(venster, text="Sluiten",width=12,command=venster.destroy)
+knopSluit = Button(venster, text="Sluiten",width=12,command=venster.destroy, bg="red")
 knopSluit.grid(row=17, column=4)
 
-labelPizza = Label(venster, text="Gekozen pizza")
+labelPizza = Label(venster, text="Gekozen pizza", bg="lightblue")
 labelPizza.grid(row=8, column=0, sticky="W")
 invoerveldGeselecteerdePizza = Entry(venster)
 invoerveldGeselecteerdePizza.grid(row=8, column=1, sticky="W")
 
-labelKlantnaam = Label(venster, text="Klantnaam!")
+labelKlantnaam = Label(venster, text="Klantnaam!", bg="lightblue")
 labelKlantnaam.grid(row=1, column=0, sticky="W")
 ingevoerde_klantnaam = StringVar()
 invoerveldKlantnaam = Entry(venster, textvariable=ingevoerde_klantnaam)
@@ -83,14 +83,14 @@ invoerveldKlantnaam.grid(row=1, column=1, sticky="W")
 invoerveldKlantNr = Entry(venster)
 invoerveldKlantNr.grid(row=2, column=1, sticky="W")
 
-knopZoekOpKlantnaam = Button(venster, text="Zoek klant", width=12, command=zoekKlant)
+knopZoekOpKlantnaam = Button(venster, text="Zoek klant", width=12, command=zoekKlant, bg="lightblue")
 knopZoekOpKlantnaam.grid(row=1, column=4)
 
-ListboxMenu = Listbox(venster, height=6, width=50)
+ListboxMenu = Listbox(venster, height=6, width=50, bg="lightblue")
 ListboxMenu.grid(row=2, column=1, rowspan=6, columnspan=2, sticky="W")
 ListboxMenu.bind('<<ListboxSelect>>', haalGeselecteerdeRijOp)
 
-knopToonPizzas = Button(venster, text="Toon alle pizza’s", width=12, command=toonMenuInListbox)
+knopToonPizzas = Button(venster, text="Toon alle pizza’s", width=12, command=toonMenuInListbox, bg="lightblue")
 knopToonPizzas.grid(row=3, column=4)
 
 aantalGekozen = IntVar()
@@ -98,10 +98,10 @@ aantalGekozen.set(1)
 optionMenuPizzaAantal = OptionMenu(venster, aantalGekozen, 1,2,3)
 optionMenuPizzaAantal.grid(row=9, column=1, sticky="W")
 
-VoegToeWinkelwagen = Button(venster, text="Voeg toe aan winkelwagen", command=voegToeAanWinkelWagen)
+VoegToeWinkelwagen = Button(venster, text="Voeg toe aan winkelwagen", command=voegToeAanWinkelWagen, bg="lightblue")
 VoegToeWinkelwagen.grid(row=11, column=0, sticky="W")
 
-ListboxWinkelwagen = Listbox(venster, height=6, width=50)
+ListboxWinkelwagen = Listbox(venster, height=6, width=50, bg="lightblue")
 ListboxWinkelwagen.grid(row=12, column=1, rowspan=6, columnspan=2, sticky="W")
 ListboxWinkelwagen.bind("<<ListboxSelect>>", voegToeAanWinkelWagen)
 
